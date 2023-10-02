@@ -1,0 +1,21 @@
+.banner{
+    background-color: peachpuff;
+    color:black;
+    margin-top: 75px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#small-slacky{
+    height: 100px;
+    width: 100px;
+}
+
+#slacky{
+    color: black;
+    font-size: 100px;
+}
+
+.bold{
+    font-weight: 900;
+}
