@@ -18,6 +18,10 @@ guessButton.addEventListener('click', () => {
   target = generateTarget();
   // Retrieve the player's guess
   const currentHumanGuess = humanGuessInput.value;
+  if (currentHumanGuess < 0 || currentHumanGuess > 9){
+    alert('Invalid Number! Please enter a number between 0-9 only');
+    return; //Exit the function if this alert is triggered
+  }
   // Make a random 'computer guess'
   const computerGuess = Math.floor(Math.random() * 10);
 
@@ -84,10 +88,10 @@ subtractButton.addEventListener('click', () => {
 });
 
 const handleValueChange = value => {
-  if (value > 0 && value <= 9) {
+  if (value > 0 && value < 9) {
     subtractButton.removeAttribute('disabled');
     addButton.removeAttribute('disabled');
-  } else if (value > 9) {
+  } else if (value >= 9) {
     addButton.setAttribute('disabled', true);
   } else if (value <= 0) {
     subtractButton.setAttribute('disabled', true);
